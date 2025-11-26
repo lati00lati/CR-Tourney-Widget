@@ -1,0 +1,234 @@
+.tournament-container {
+  font-family: "Clash";
+  color: white;
+  -webkit-text-stroke: 0.05em black;
+  text-shadow: 0 0.175em 0 black;
+  --player-rank-font: 30px;
+  position: relative;
+  visibility: hidden;;
+}
+
+.player.entering {
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.tournament-password {
+  height: 20%;
+  box-sizing: border-box;
+  margin: 0;
+  align-content: center;
+  overflow: hidden;
+  padding: 3.5% 0;
+  font-size: {{password_fontsize}}px;
+}
+
+.progress-label {
+  z-index: 2;
+  white-space: nowrap;
+  grid-area: overlap;
+  overflow: hidden;
+  height: 80%;
+  width: 100%;
+  align-self: center;
+  align-content: center;
+  margin: 0;
+  padding: 2% 0;
+  font-size: {{timer_fontsize}}px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.4s ease-in-out;
+  z-index: 1;
+  border-radius: 8px;
+  grid-area: overlap;
+}
+
+.wreath-half {
+  width: 20%;
+  z-index: 2;
+  flex: 0 0 auto;
+}
+
+.tournament-info {
+  width: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.progress-bar-container {
+  margin: 0;
+  width: 130%;
+  margin-left: -15%;
+  height: 20%;
+  align-content: center;
+}
+
+.progress-bar-track {
+  background-color: lightgrey;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin: 0;
+  display: grid;
+  width: 100%;
+  height: 70%;
+  grid-template-areas: "overlap";
+}
+
+.tournament-name {
+  height: 60%;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 15%;
+  align-content: center;
+  font-size: {{title_fontsize}}px;
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 12.5%;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 75%;
+  background: linear-gradient(to bottom,
+      #4489BE 0%,
+      #489EE0 10%,
+      #4574B1 100%);
+  border-radius: 100px;
+  z-index: -2;
+  border: 3px solid #6991AC;
+  outline: 3px solid #04539A;
+}
+
+header {
+  text-align: center;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  position: relative;
+}
+
+.players {
+  display: grid;
+  padding: 1rem 2rem 0 2rem;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    #DCE3EC 0%,      /* top color */
+    #DCE3EC 48%,     /* solid top until 48% */
+    #D5DEE8 50%,     /* slight blend in middle 48–52% */
+    #BAC7DF 52%,     /* start bottom color at 52% */
+    #BAC7DF 100%     /* bottom color solid */
+  );  
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.35rem;
+  outline: 2px solid black;
+  border: 2px solid white;
+  transition: transform 0.5s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.3s ease;
+  position: relative;
+  width: 100%;
+  height: 2.25em;
+  max-height: 2.25em;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: {{player_fontsize}}px;
+}
+
+.player-rank {
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1%;
+  margin: 0px;
+}
+
+.player-name {
+  width: 70%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.player-score-container {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+  margin: 0px;
+}
+
+.player-score {
+  background-color: #91ABA3;
+  border: 2px solid gray;
+  padding: 2px;
+  border-radius: 10px;
+  width: 70%;
+  text-align: center;
+  padding-left: 5%;
+}
+
+.player-score-medal {
+  width: 5%;
+  position: absolute;
+  left: 81%;
+}
+
+.rank-gold {
+  background: radial-gradient(ellipse 85% 50% at top center, #F2D27A 0%, #F2D27A 100%, #EFCA56 100%);
+  border: 0.2rem solid #DE9230;
+  outline: 2px solid white;
+}
+
+.rank-silver {
+  background: radial-gradient(ellipse 85% 50% at top center, #C7CDC9 0%, #C7CDC9 100%, #C5CDC8 100%);
+  border: 0.2rem solid #778B96;
+  outline: 2px solid white;
+}
+
+.rank-bronze {
+  background: radial-gradient(ellipse 85% 50% at top center, #D09F80 0%, #D09F80 100%, #C78A63 100%);
+  border: 0.2rem solid #904735;
+  outline: 2px solid white;
+}

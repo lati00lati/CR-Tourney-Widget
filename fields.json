@@ -1,0 +1,79 @@
+{
+  "auto_title_size": {
+    "type": "checkbox",
+    "label": "Check to auto-adjust the title fontsize",
+    "value": true,
+    "group": "Text Settings"
+  },
+  "title_fontsize": {
+    "type": "number",
+    "label": "Custom title fontsize (px)",
+    "value": 30,
+    "group": "Text Settings"
+  },
+  "password_text": {
+    "type": "text",
+    "label": "Password Display. Leave blank if none.",
+    "value": "Password: 123456789",
+    "group": "Text Settings"
+  },
+  "auto_password_size": {
+    "type": "checkbox",
+    "label": "Check to auto-adjust the password fontsize",
+    "value": true,
+    "group": "Text Settings"
+  },
+  "password_fontsize": {
+    "type": "number",
+    "label": "Custom password fontsize (px)",
+    "value": 20,
+    "group": "Text Settings"
+  },
+  "auto_timer_size": {
+    "type": "checkbox",
+    "label": "Check to auto-adjust the timer fontsize",
+    "value": true,
+    "group": "Text Settings"
+  },
+  "timer_fontsize": {
+    "type": "text",
+    "label": "Custom timer fontsize (px)",
+    "value": 20,
+    "group": "Text Settings"
+  },
+  "player_fontsize": {
+    "type": "number",
+    "label": "Custom player fontsize (px)",
+    "value": 20,
+    "group": "Text Settings"
+  },
+  "command": {
+    "type": "text",
+    "label": "Command to use for this widget.",
+    "value": "!tourney",
+    "group": "Important Settings"
+  },
+  "always_display_widget": {
+    "type": "checkbox",
+    "label": "Keeps widget visible. Use this to place the widget where you want. If unchecked, will only display during tournaments.",
+    "value": true,
+    "group": "Important Settings"
+  },
+  "time_to_hide": {
+    "type": "number",
+    "label": "How many secs to stay visible after tourney",
+    "value": 360,
+    "min": 1,
+    "max": 1800,
+    "group": "Important Settings"
+  },
+  "numPlayers": {
+    "type": "range",
+    "label": "Number of players to display",
+    "value": 5,
+    "min": 1,
+    "max": 10,
+    "step": 1,
+    "group": "Important Settings"
+  }
+}
