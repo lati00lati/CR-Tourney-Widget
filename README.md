@@ -4,7 +4,7 @@ Displays tournament info and a list of the top 10 players (or less) on a leaderb
 ## How to Install
 
 **Via Link**  
-Click the following link and sign-in ➜ https://seapi.c4ldas.com.br/overlays/install/1764126358396  
+Click the following link and sign-in ➜ https://seapi.c4ldas.com.br/overlays/install/1764306784884  
 
 **Manually**  
 https://streamelements.com/dashboard/overlays ➜ "New Overlay" ➜ Start  
